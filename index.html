@@ -13,11 +13,11 @@
     --white:#FFFFFF;
     --paper:#FFFEFC;
     --ink:#1A1A1A;
-    --pink:#F4A6BE;
-    --pink-deep:#EA84A3;
-    --sky:#A7D8E8;
-    --lemon:#F7DE7A;
-    --lavender:#D6CBE4;
+    --pink:#FF2E9E;
+    --pink-deep:#E0157D;
+    --sky:#0080FF;
+    --lemon:#FFD400;
+    --lavender:#00C853;
     --line:rgba(26,26,26,0.12);
     --radius:22px;
   }
@@ -32,7 +32,7 @@
     overflow-x:hidden;
   }
   h1,h2,h3,.display{
-    font-family:'Zen Maru Gothic', sans-serif;
+    font-family:'Zen Kaku Gothic New', sans-serif;
     font-weight:700;
     line-height:1.4;
     letter-spacing:0.01em;
@@ -109,15 +109,16 @@
     overflow:hidden;
     background-image:url('hero-bg.jpg');
     background-size:cover;
-    background-position:center 32%;
+    background-position:center center;
   }
   .hero::before{
     content:"";position:absolute;inset:0;z-index:1;
-    background:radial-gradient(ellipse at center, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 45%, rgba(255,255,255,0) 70%);
+    background:linear-gradient(90deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.14) 38%, rgba(255,255,255,0) 58%);
   }
   .hero-content{
-    position:relative;z-index:3;max-width:720px;margin:0 auto;text-align:center;
+    position:relative;z-index:3;max-width:480px;margin:0;text-align:left;
   }
+  .hero-tag-row{text-align:left;}
   .hero-tag{
     display:inline-block;font-family:'Baloo 2',cursive;
     font-size:12.5px;letter-spacing:0.1em;font-weight:700;
@@ -126,19 +127,18 @@
     transform:rotate(-3deg);
   }
   .hero h1{
-    font-size:clamp(48px,8vw,92px);
-    color:var(--ink);margin:0 0 22px;
+    font-size:clamp(24px,6vw,54px);
+    color:#fff;margin:0 0 30px;
+    white-space:nowrap;
   }
   .hero h1 .hl{
-    color:var(--pink-deep);
-    text-decoration:underline wavy;text-decoration-color:var(--pink);
-    text-decoration-thickness:5px;text-underline-offset:8px;
+    color:#fff;
   }
   .hero p.lead{
     font-size:16.5px;line-height:1.95;color:rgba(26,26,26,0.72);
-    max-width:440px;margin:0 auto 32px;
+    max-width:440px;margin:0 0 32px;
   }
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:flex-start;margin-top:18px;}
   .btn-primary{
     background:var(--ink);color:#fff;border:3px solid var(--ink);
     padding:17px 34px;border-radius:999px;
@@ -148,12 +148,18 @@
   }
   .btn-primary:hover{background:var(--pink);color:var(--ink);transform:translateY(-3px) rotate(-1deg);box-shadow:0 14px 28px -10px rgba(234,132,163,0.55);}
   .btn-ghost{
-    font-size:14px;font-weight:700;color:var(--ink);
-    border-bottom:2px solid var(--pink);padding-bottom:2px;
+    font-size:14px;font-weight:700;color:#fff;
+    border-bottom:2px solid #fff;padding-bottom:2px;
+  }
+  .hero .btn-primary{
+    background:#fff;color:var(--ink);border-color:#fff;
+  }
+  .hero .btn-primary:hover{
+    background:var(--ink);color:#fff;border-color:var(--ink);
   }
   .hero-note{
     margin-top:30px;font-size:12.5px;font-weight:700;color:var(--ink);
-    display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+    display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start;
   }
   .hero-note span{
     background:#fff;border:1.5px solid var(--line);
@@ -161,39 +167,20 @@
   }
   .hero-note span::before{content:"✓";color:var(--pink-deep);font-weight:900;}
 
-  /* --- scattered dot stickers (signature element) --- */
+  /* --- scattered decorative dots (kept minimal) --- */
   .hero-decor{position:absolute;inset:0;z-index:2;}
-  .dot{
-    position:absolute;border-radius:50%;
-    border:5px solid #fff;
-    box-shadow:0 14px 26px -12px rgba(26,26,26,0.32);
-    display:flex;align-items:center;justify-content:center;text-align:center;
-  }
-  .dot .name{font-size:10.5px;font-weight:700;color:var(--ink);letter-spacing:.01em;line-height:1.3;}
-  .d1{width:150px;height:150px;background:var(--pink);top:6%;left:4%;transform:rotate(-8deg);animation:float-a 7s ease-in-out infinite;}
-  .d2{width:108px;height:108px;background:var(--sky);top:56%;left:2%;transform:rotate(6deg);animation:float-b 8s ease-in-out infinite;}
-  .d3{width:96px;height:96px;background:var(--lavender);bottom:4%;left:24%;transform:rotate(-5deg);}
-  .d4{width:130px;height:130px;background:var(--lemon);top:8%;right:4%;transform:rotate(9deg);animation:float-a 9s ease-in-out infinite;}
-  .d5{width:110px;height:110px;background:var(--ink);bottom:8%;right:6%;transform:rotate(-6deg);}
-  .d5 .name{color:#fff;}
   .mini{position:absolute;border-radius:50%;opacity:.85;}
   .m1{width:22px;height:22px;background:var(--sky);top:34%;left:16%;}
   .m2{width:16px;height:16px;background:var(--pink-deep);bottom:22%;right:20%;}
   .m3{width:20px;height:20px;background:var(--lemon);top:20%;left:44%;}
-  @keyframes float-a{0%,100%{transform:translateY(0) rotate(-8deg);}50%{transform:translateY(-12px) rotate(-4deg);}}
-  @keyframes float-b{0%,100%{transform:translateY(0) rotate(6deg);}50%{transform:translateY(10px) rotate(10deg);}}
-  @media (prefers-reduced-motion: reduce){.d1,.d2{animation:none;}}
   @media (max-width:900px){
-    .d1{width:100px;height:100px;}
-    .d4{width:96px;height:96px;}
-    .d2,.d3,.d5{width:80px;height:80px;}
     .mini{display:none;}
   }
   @media (max-width:640px){
-    .hero-decor{position:static;display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:36px;}
-    .dot{position:static !important;transform:none !important;animation:none !important;width:74px !important;height:74px !important;}
-    .sticker-badge{position:static !important;transform:rotate(-6deg) !important;margin:0 auto 28px;}
+    .hero-decor{position:absolute;}
+    .sticker-badge{transform:rotate(-6deg) !important;}
   }
+
 
   /* ---------- SECTION shared ---------- */
   section{padding:100px 0;position:relative;}
@@ -235,6 +222,91 @@
   .banner .eyebrow::before{background:var(--ink);}
   .banner h2{font-size:clamp(30px,5vw,52px);color:var(--ink);margin:0 0 22px;}
   .banner p{max-width:520px;margin:0 auto;font-size:14.5px;line-height:1.95;color:rgba(26,26,26,0.72);}
+
+  /* ---------- COLLAB ---------- */
+  .en-title{
+    font-family:'Baloo 2',cursive;font-weight:800;
+    font-size:clamp(24px,3.4vw,34px);letter-spacing:.01em;
+  }
+  .product-grid-single{grid-template-columns:minmax(220px,320px);}
+  .collabo-item{
+    background:#fff;border-radius:20px;overflow:hidden;
+    box-shadow:0 14px 28px -18px rgba(26,26,26,0.3);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .collabo-item:hover{transform:translateY(-5px);box-shadow:0 20px 34px -18px rgba(26,26,26,0.35);}
+  .collabo-item .product-body{padding:20px;}
+  .collabo-item .collab-row{font-size:12.5px;margin-bottom:8px;}
+  .collabo-item .product-btn{margin-top:12px;}
+  .all-cta{text-align:center;margin-top:36px;}
+  .collab-row{
+    font-size:14px;font-weight:700;color:var(--ink);
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  }
+  .collab-row + .collab-row{margin-top:10px;}
+  .collab-row a{color:var(--pink-deep);text-decoration:underline;font-weight:700;}
+  .collab-label{
+    font-family:'Baloo 2',cursive;font-size:10.5px;letter-spacing:.08em;
+    background:var(--ink);color:#fff;padding:4px 10px;border-radius:999px;
+  }
+
+  /* ---------- PRODUCTS ---------- */
+  .product-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  }
+  .product-card{
+    background:#fff;border-radius:20px;overflow:hidden;
+    box-shadow:0 14px 28px -18px rgba(26,26,26,0.3);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .product-card:hover{transform:translateY(-5px);box-shadow:0 20px 34px -18px rgba(26,26,26,0.35);}
+  .product-img{
+    aspect-ratio:1/1;position:relative;
+  }
+  .img-pink{background:var(--pink);}
+  .img-sky{background:var(--sky);}
+  .img-lemon{background:var(--lemon);}
+  .img-green{background:var(--lavender);}
+  .product-badge{
+    position:absolute;top:14px;left:14px;
+    background:var(--ink);color:#fff;
+    font-family:'Baloo 2',cursive;font-size:11px;font-weight:700;
+    padding:5px 12px;border-radius:999px;letter-spacing:.03em;
+  }
+  .product-body{padding:20px;}
+  .product-body h3{font-size:15.5px;margin:0 0 8px;}
+  .product-desc{font-size:12.5px;line-height:1.7;color:rgba(26,26,26,0.62);margin:0 0 14px;min-height:38px;}
+  .product-price{font-family:'Baloo 2',cursive;font-weight:700;font-size:17px;margin-bottom:16px;}
+  .product-price span{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:400;font-size:11.5px;color:rgba(26,26,26,0.5);margin-left:2px;}
+  .product-btn{
+    display:block;text-align:center;background:var(--ink);color:#fff;
+    padding:12px;border-radius:999px;font-size:13.5px;font-weight:700;
+    transition:background .2s ease, color .2s ease;
+  }
+  .product-btn:hover{background:var(--pink);color:var(--ink);}
+  @media (max-width:900px){.product-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.product-grid{grid-template-columns:1fr;}}
+
+  /* ---------- COLLABORATION ---------- */
+  .collabo-card{
+    display:grid;grid-template-columns:0.9fr 1.1fr;
+    background:#fff;border-radius:28px;overflow:hidden;
+    box-shadow:0 20px 40px -24px rgba(26,26,26,0.35);
+  }
+  .collabo-visual{position:relative;min-height:280px;}
+  .collabo-body{padding:44px 40px;display:flex;flex-direction:column;justify-content:center;}
+  .collabo-tag{
+    display:inline-block;font-family:'Baloo 2',cursive;font-size:11.5px;letter-spacing:.1em;font-weight:700;
+    color:var(--pink-deep);margin-bottom:14px;
+  }
+  .collabo-body h3{font-size:clamp(20px,2.6vw,26px);margin:0 0 14px;}
+  .collabo-body p{font-size:14px;line-height:1.85;color:rgba(26,26,26,0.68);margin:0 0 24px;}
+  .collabo-body .btn-primary{align-self:flex-start;}
+  @media (max-width:760px){
+    .collabo-card{grid-template-columns:1fr;}
+    .collabo-visual{min-height:220px;}
+    .collabo-body{padding:32px 26px;}
+  }
 
   /* ---------- LINEUP ---------- */
   .lineup-grid{
@@ -320,156 +392,140 @@
 
 <header class="hero">
   <div class="hero-decor" aria-hidden="true">
-    <div class="sticker-badge" style="top:2%;right:22%;"><span>TOKYO<br>HARAJUKU<br>BORN</span></div>
-    <div class="dot d1"><div class="name">BUBBLE<br>PINK</div></div>
-    <div class="dot d2"><div class="name">SKY<br>BLUE</div></div>
-    <div class="dot d3"><div class="name">LAVENDER</div></div>
-    <div class="dot d4"><div class="name">LEMON<br>YELLOW</div></div>
-    <div class="dot d5"><div class="name">INK<br>BLACK</div></div>
+    <div class="sticker-badge" style="top:2%;right:4%;"><span>TOKYO<br>HARAJUKU<br>BORN</span></div>
     <div class="mini m1"></div>
     <div class="mini m2"></div>
     <div class="mini m3"></div>
   </div>
   <div class="wrap hero-content">
-    <div class="hero-tag">SEMI-CURED GEL NAIL</div>
-    <h1>好きを、<br><span class="hl">指先</span>に。</h1>
-    <p class="lead">忙しい毎日のなかで、指先だけは、いちばん自分でいられる場所。POPMOREは、貼ってUVライトで固めるだけの半硬化ジェルネイルで、その気持ちをそっと後押しします。</p>
+    <div class="hero-tag-row"><div class="hero-tag">SEMI-CURED GEL NAIL</div></div>
+    <h1>好きを、<span class="hl">指先</span>に。</h1>
     <div class="hero-ctas">
       <a class="btn-primary" id="heroShopBtn" href="https://popmore.stores.jp" target="_blank" rel="noopener noreferrer">コレクションを見る</a>
       <a class="btn-ghost" href="#howto">使い方を見る</a>
     </div>
     <div class="hero-note">
       <span>UVライトで最短30秒硬化</span>
-      <span>除光液でオフ可能</span>
       <span>両手約15分</span>
     </div>
   </div>
 </header>
 
-<section class="story">
-  <div class="story-inner">
-    <div class="story-tag">OUR STORY</div>
-    <h2>指先だけは、<br>自分のままでいたい。</h2>
-    <p>抱っこに、着替えに、寝かしつけ。気づけば、鏡を見る時間さえない日がある。それでも、洗い物の合間やスマホの画面に、ふと自分の指先が映る瞬間がある。</p>
-    <p>せめて指先だけは、自分の好きなものを乗せていたい。そう思って子どもが寝たあとにひとりでネイルをした日、驚くほど気持ちが軽くなった。POPMOREは、その小さな幸せを届けたくて生まれました。</p>
-    <div class="signoff">忙しい毎日の中で、指先だけは、いちばん自分でいられる場所だった。</div>
-  </div>
-</section>
-
-<section id="features">
+<section id="collab">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">WHY POPMORE</div>
-      <h2>好きになる理由、たぶん4つ。</h2>
-      <p>「サロンみたいなのに、こんなに気軽でいいの?」って、たぶん思うはず。</p>
+      <h2 class="en-title">COLLABO</h2>
     </div>
-    <div class="features-grid">
-      <div class="feature">
-        <div class="num">01</div>
-        <h3>最短30秒硬化</h3>
-        <p>UVライトを数十秒〜1分あてるだけ。特別な技術がなくても、その場でしっかり定着します。</p>
+    <div class="product-grid">
+      <div class="collabo-item">
+        <div class="product-img img-pink"><div class="product-badge">Design 01</div></div>
+        <div class="product-body">
+          <div class="collab-row"><span class="collab-label">SALON</span>ULL(栄・矢場町) <a href="https://www.instagram.com/ull_official_/" target="_blank" rel="noopener noreferrer">@ull_official_</a></div>
+          <div class="collab-row"><span class="collab-label">NAILIST</span>emiri</div>
+          <a class="product-btn" href="https://popmore.stores.jp" target="_blank" rel="noopener noreferrer">SHOPで見る</a>
+        </div>
       </div>
-      <div class="feature">
-        <div class="num">02</div>
-        <h3>ぷっくり質感</h3>
-        <p>本物のジェルネイルのような厚みと艶を、シート1枚で再現しました。</p>
+      <div class="collabo-item">
+        <div class="product-img img-sky"><div class="product-badge">Design 02</div></div>
+        <div class="product-body">
+          <div class="collab-row"><span class="collab-label">SALON</span>［サロン名］</div>
+          <div class="collab-row"><span class="collab-label">NAILIST</span>［ネイリスト名］</div>
+          <a class="product-btn" href="https://popmore.stores.jp" target="_blank" rel="noopener noreferrer">SHOPで見る</a>
+        </div>
       </div>
-      <div class="feature">
-        <div class="num">03</div>
-        <h3>簡単オフ</h3>
-        <p>除光液を含ませるだけで、するんと剥がせます。爪への負担も最小限に。</p>
-      </div>
-      <div class="feature">
-        <div class="num">04</div>
-        <h3>約15分で完成</h3>
-        <p>子どもが昼寝している間に、両手分が仕上がるスピード感です。</p>
+      <div class="collabo-item">
+        <div class="product-img img-lemon"><div class="product-badge">Design 03</div></div>
+        <div class="product-body">
+          <div class="collab-row"><span class="collab-label">SALON</span>［サロン名］</div>
+          <div class="collab-row"><span class="collab-label">NAILIST</span>［ネイリスト名］</div>
+          <a class="product-btn" href="https://popmore.stores.jp" target="_blank" rel="noopener noreferrer">SHOPで見る</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="wrap">
-<section class="banner">
-  <div class="eyebrow">WHY HARAJUKU</div>
-  <h2>原宿から、<br>世界へ。</h2>
-  <p>誰かに合わせなくていい街。着たいものを着て、なりたい自分でいられる場所。POPMOREは、その自由な空気を起点に生まれたブランドです。</p>
-</section>
-</div>
-
-<section id="lineup">
+<section id="new">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">COLOR LINEUP</div>
-      <h2>気分で選ぶ、5色。</h2>
-      <p>POPMOREのブランドカラーが、そのまま指先の色になりました。</p>
+      <h2 class="en-title">NEW</h2>
     </div>
-    <div class="lineup-grid">
-      <div class="dot-card"><div class="chip c1"></div><div class="cname">BUBBLE PINK</div><div class="cmood">まずはこれから</div></div>
-      <div class="dot-card"><div class="chip c2"></div><div class="cname">SKY BLUE</div><div class="cmood">今日は自由な気分</div></div>
-      <div class="dot-card"><div class="chip c3"></div><div class="cname">LEMON YELLOW</div><div class="cmood">元気をチャージ</div></div>
-      <div class="dot-card"><div class="chip c4"></div><div class="cname">LAVENDER</div><div class="cmood">ちょっと個性的に</div></div>
-      <div class="dot-card"><div class="chip c5"></div><div class="cname">INK BLACK</div><div class="cmood">きゅっと引き締めて</div></div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-img img-pink"></div>
+        <div class="product-body"><h3>New 01</h3></div>
+      </div>
+      <div class="product-card">
+        <div class="product-img img-sky"></div>
+        <div class="product-body"><h3>New 02</h3></div>
+      </div>
+      <div class="product-card">
+        <div class="product-img img-lemon"></div>
+        <div class="product-body"><h3>New 03</h3></div>
+      </div>
+      <div class="product-card">
+        <div class="product-img img-green"></div>
+        <div class="product-body"><h3>New 04</h3></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="howto">
+<section id="best">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">HOW TO USE</div>
-      <h2>5ステップで、完成。</h2>
+      <h2 class="en-title">BEST</h2>
     </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>爪のケア</h3>
-        <p>爪の形を整え、甘皮を軽く押し上げて表面の油分をオフします。</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-img img-lemon"></div>
+        <div class="product-body"><h3>Best 01</h3></div>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>サイズ選び</h3>
-        <p>爪の幅に近いシートを選びます。迷ったら少し大きめが安心です。</p>
+      <div class="product-card">
+        <div class="product-img img-pink"></div>
+        <div class="product-body"><h3>Best 02</h3></div>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>貼って密着</h3>
-        <p>根元から空気を抜くように貼り、指の腹で押さえて密着させます。</p>
+      <div class="product-card">
+        <div class="product-img img-green"></div>
+        <div class="product-body"><h3>Best 03</h3></div>
       </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h3>UVライトで硬化</h3>
-        <p>専用UVライトを30秒〜1分あてて、ぷっくりジェルをしっかり定着させます。</p>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <h3>はみ出しオフ</h3>
-        <p>ファイルで長さと形を整えたら完成。トップコートで艶をプラスしても◎。</p>
+      <div class="product-card">
+        <div class="product-img img-sky"></div>
+        <div class="product-body"><h3>Best 04</h3></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sns">
+<section id="all">
   <div class="wrap">
-    <h2>#POPMORE で見せてほしい</h2>
-    <p>InstagramとTikTokでも新色やアレンジを毎週発信中。</p>
-    <div class="sns-handles">
-      <a href="#" target="_blank" rel="noopener noreferrer">Instagram @popmore_jp</a>
-      <a href="#" target="_blank" rel="noopener noreferrer">TikTok @popmore_jp</a>
+    <div class="section-head">
+      <h2 class="en-title">ALL</h2>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-img img-sky"></div>
+        <div class="product-body"><h3>All 01</h3></div>
+      </div>
+      <div class="product-card">
+        <div class="product-img img-green"></div>
+        <div class="product-body"><h3>All 02</h3></div>
+      </div>
+      <div class="product-card">
+        <div class="product-img img-pink"></div>
+        <div class="product-body"><h3>All 03</h3></div>
+      </div>
+      <div class="product-card">
+        <div class="product-img img-lemon"></div>
+        <div class="product-body"><h3>All 04</h3></div>
+      </div>
+    </div>
+    <div class="all-cta">
+      <a class="btn-primary" href="https://popmore.stores.jp" target="_blank" rel="noopener noreferrer">全てを確認する</a>
     </div>
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="wrap">
-    <svg class="squiggle" viewBox="0 0 220 24" aria-hidden="true">
-      <path d="M4 12 Q 22 -2, 40 12 T 76 12 T 112 12 T 148 12 T 184 12 T 216 12"/>
-    </svg>
-    <h2>今日のあなたに、<br>ちょっとだけ特別を。</h2>
-    <p>気になる色から、気軽に試してみてください。</p>
-    <a class="btn-primary" id="finalShopBtn" href="https://popmore.stores.jp" target="_blank" rel="noopener noreferrer">ONLINE SHOPで見てみる</a>
-  </div>
-</section>
 
 <footer>
   <div class="wrap footer-inner">
