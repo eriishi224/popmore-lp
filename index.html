@@ -79,7 +79,8 @@
     max-width:1120px;margin:0 auto;padding:16px 24px;
     display:flex;align-items:center;justify-content:space-between;
   }
-  .logo{font-family:'Zen Maru Gothic',sans-serif;font-size:21px;font-weight:900;color:var(--ink);}
+  .logo{font-family:'Zen Maru Gothic',sans-serif;font-size:21px;font-weight:900;color:var(--ink);display:flex;align-items:center;}
+  .logo-img{height:26px;width:auto;display:block;}
   .logo span{color:var(--pink-deep);}
   .nav-cta{
     background:var(--ink);color:#fff;
@@ -368,7 +369,7 @@
   /* ---------- FOOTER ---------- */
   footer{border-top:1px solid var(--line);padding:40px 0;}
   .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-  .footer-inner .logo{font-size:16px;}
+  .footer-inner .logo-img{height:20px;}
   .footer-links{display:flex;gap:22px;font-size:13px;color:rgba(26,26,26,0.6);}
   .footer-links a:hover{color:var(--pink-deep);}
 
@@ -381,7 +382,7 @@
 
 <nav class="nav">
   <div class="nav-inner">
-    <div class="logo">POP<span>MORE</span></div>
+    <div class="logo"><img src="popmore-logo.png" alt="POPMORE" class="logo-img"></div>
     <a class="nav-cta" id="navShopBtn" href="https://popmore.stores.jp" target="_blank" rel="noopener noreferrer">SHOPを見る</a>
   </div>
 </nav>
@@ -533,7 +534,7 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <div class="logo">POP<span style="color:var(--pink-deep)">MORE</span></div>
+    <div class="logo"><img src="popmore-logo.png" alt="POPMORE" class="logo-img"></div>
     <div class="footer-links">
       <a href="https://popmore.stores.jp" target="_blank" rel="noopener noreferrer">SHOP</a>
       <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
