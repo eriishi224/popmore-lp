@@ -106,17 +106,26 @@
   .hero{
     position:relative;
     padding:80px 0 90px;
+    min-height:680px;
+    display:flex;align-items:center;
     overflow:hidden;
     background-image:url('hero-bg.jpg');
     background-size:cover;
-    background-position:center center;
+    background-position:center 50%;
+  }
+  .hero .wrap{width:100%;}
+  @media (max-width:640px){
+    .hero{min-height:560px;}
   }
   .hero::before{
     content:"";position:absolute;inset:0;z-index:1;
     background:linear-gradient(90deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.14) 38%, rgba(255,255,255,0) 58%);
   }
   .hero-content{
-    position:relative;z-index:3;max-width:480px;margin:0;text-align:left;
+    position:relative;z-index:3;max-width:420px;margin:0 0 0 8%;text-align:left;
+  }
+  @media (max-width:640px){
+    .hero-content{margin-left:0;}
   }
   .hero-tag-row{text-align:left;}
   .hero-tag{
@@ -150,12 +159,6 @@
   .btn-ghost{
     font-size:14px;font-weight:700;color:#fff;
     border-bottom:2px solid #fff;padding-bottom:2px;
-  }
-  .hero .btn-primary{
-    background:#fff;color:var(--ink);border-color:#fff;
-  }
-  .hero .btn-primary:hover{
-    background:var(--ink);color:#fff;border-color:var(--ink);
   }
   .hero-note{
     margin-top:30px;font-size:12.5px;font-weight:700;color:var(--ink);
@@ -385,14 +388,15 @@
 
 <div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-track">
-    <span>貼るだけ、3分ネイル</span><span>UVライトで最短30秒硬化</span><span>好きを、指先に。</span><span>TOKYO HARAJUKU BORN</span>
-    <span>貼るだけ、3分ネイル</span><span>UVライトで最短30秒硬化</span><span>好きを、指先に。</span><span>TOKYO HARAJUKU BORN</span>
+    <span>WELCOME TO POPMORE</span><span>WEAR YOUR JOY</span>
+    <span>WELCOME TO POPMORE</span><span>WEAR YOUR JOY</span>
+    <span>WELCOME TO POPMORE</span><span>WEAR YOUR JOY</span>
+    <span>WELCOME TO POPMORE</span><span>WEAR YOUR JOY</span>
   </div>
 </div>
 
 <header class="hero">
   <div class="hero-decor" aria-hidden="true">
-    <div class="sticker-badge" style="top:2%;right:4%;"><span>TOKYO<br>HARAJUKU<br>BORN</span></div>
     <div class="mini m1"></div>
     <div class="mini m2"></div>
     <div class="mini m3"></div>
