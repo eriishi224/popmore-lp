@@ -271,6 +271,14 @@
   .img-sky{background:var(--sky);}
   .img-lemon{background:var(--lemon);}
   .img-green{background:var(--lavender);}
+  .product-img.coming-soon::after{
+    content:"COMING SOON...";
+    position:absolute;inset:0;
+    background:rgba(26,26,26,0.5);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:'Baloo 2',cursive;font-weight:700;
+    font-size:13px;letter-spacing:.04em;text-align:center;
+  }
   .product-badge{
     position:absolute;top:14px;left:14px;
     background:var(--ink);color:#fff;
@@ -431,7 +439,7 @@
         </div>
       </div>
       <div class="collabo-item">
-        <div class="product-img img-sky"><div class="product-badge">Design 02</div></div>
+        <div class="product-img img-sky coming-soon"><div class="product-badge">Design 02</div></div>
         <div class="product-body">
           <div class="collab-row"><span class="collab-label">SALON</span>［サロン名］</div>
           <div class="collab-row"><span class="collab-label">NAILIST</span>［ネイリスト名］</div>
@@ -439,7 +447,7 @@
         </div>
       </div>
       <div class="collabo-item">
-        <div class="product-img img-lemon"><div class="product-badge">Design 03</div></div>
+        <div class="product-img img-lemon coming-soon"><div class="product-badge">Design 03</div></div>
         <div class="product-body">
           <div class="collab-row"><span class="collab-label">SALON</span>［サロン名］</div>
           <div class="collab-row"><span class="collab-label">NAILIST</span>［ネイリスト名］</div>
@@ -457,19 +465,19 @@
     </div>
     <div class="product-grid">
       <div class="product-card">
-        <div class="product-img img-pink"></div>
+        <div class="product-img img-pink coming-soon"></div>
         <div class="product-body"><h3>New 01</h3></div>
       </div>
       <div class="product-card">
-        <div class="product-img img-sky"></div>
+        <div class="product-img img-sky coming-soon"></div>
         <div class="product-body"><h3>New 02</h3></div>
       </div>
       <div class="product-card">
-        <div class="product-img img-lemon"></div>
+        <div class="product-img img-lemon coming-soon"></div>
         <div class="product-body"><h3>New 03</h3></div>
       </div>
       <div class="product-card">
-        <div class="product-img img-green"></div>
+        <div class="product-img img-green coming-soon"></div>
         <div class="product-body"><h3>New 04</h3></div>
       </div>
     </div>
@@ -483,19 +491,19 @@
     </div>
     <div class="product-grid">
       <div class="product-card">
-        <div class="product-img img-lemon"></div>
+        <div class="product-img img-lemon coming-soon"></div>
         <div class="product-body"><h3>Best 01</h3></div>
       </div>
       <div class="product-card">
-        <div class="product-img img-pink"></div>
+        <div class="product-img img-pink coming-soon"></div>
         <div class="product-body"><h3>Best 02</h3></div>
       </div>
       <div class="product-card">
-        <div class="product-img img-green"></div>
+        <div class="product-img img-green coming-soon"></div>
         <div class="product-body"><h3>Best 03</h3></div>
       </div>
       <div class="product-card">
-        <div class="product-img img-sky"></div>
+        <div class="product-img img-sky coming-soon"></div>
         <div class="product-body"><h3>Best 04</h3></div>
       </div>
     </div>
@@ -509,19 +517,19 @@
     </div>
     <div class="product-grid">
       <div class="product-card">
-        <div class="product-img img-sky"></div>
+        <div class="product-img img-sky coming-soon"></div>
         <div class="product-body"><h3>All 01</h3></div>
       </div>
       <div class="product-card">
-        <div class="product-img img-green"></div>
+        <div class="product-img img-green coming-soon"></div>
         <div class="product-body"><h3>All 02</h3></div>
       </div>
       <div class="product-card">
-        <div class="product-img img-pink"></div>
+        <div class="product-img img-pink coming-soon"></div>
         <div class="product-body"><h3>All 03</h3></div>
       </div>
       <div class="product-card">
-        <div class="product-img img-lemon"></div>
+        <div class="product-img img-lemon coming-soon"></div>
         <div class="product-body"><h3>All 04</h3></div>
       </div>
     </div>
@@ -538,9 +546,8 @@
     <div class="footer-links">
       <a href="https://popmore.stores.jp" target="_blank" rel="noopener noreferrer">SHOP</a>
       <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="mailto:popmore.erika@gmail.com">お問い合わせ</a>
     </div>
-    <div style="font-size:12px;color:rgba(26,26,26,0.45);">© 2026 MORE STUDIO Inc.</div>
   </div>
 </footer>
 
