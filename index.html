@@ -3,21 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>POPMORE | 好きを、指先に。</title>
+<title>POPMORE(ポップモア)| 貼るだけ3分のセミキュアジェルネイルシール</title>
+<meta name="description" content="POPMOREは貼るだけ3分で完成するセミキュアジェルネイルシールブランド。サロン品質の発色と個性的なデザインを、自分のタイミングで楽しめます。名古屋のネイルサロンULL・ネイリストemiri監修。">
+<meta name="keywords" content="POPMORE,ポップモア,ジェルネイルシール,セミキュアジェル,ネイルシール,セルフネイル,貼るだけネイル">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://popmore.jp/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+<meta name="theme-color" content="#FF4D74">
+
+<!-- Open Graph / SNS シェア用 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="POPMORE">
+<meta property="og:title" content="POPMORE(ポップモア)| 貼るだけ3分のセミキュアジェルネイルシール">
+<meta property="og:description" content="貼るだけ3分で完成するセミキュアジェルネイルシール。サロン品質の発色と個性的なデザインを、自分のタイミングで。">
+<meta property="og:url" content="https://popmore.jp/">
+<meta property="og:image" content="https://popmore.jp/ogp.png">
+<meta property="og:locale" content="ja_JP">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="POPMORE(ポップモア)| 貼るだけ3分のセミキュアジェルネイルシール">
+<meta name="twitter:description" content="貼るだけ3分で完成するセミキュアジェルネイルシール。サロン品質の発色と個性的なデザインを、自分のタイミングで。">
+<meta name="twitter:image" content="https://popmore.jp/ogp.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Yomogi&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "POPMORE",
+  "url": "https://popmore.jp/",
+  "logo": "https://popmore.jp/popmore-logo.png",
+  "sameAs": ["https://www.instagram.com/ull_official_/"]
+}
+</script>
 <style>
   :root{
-    --pink:#FF2E9E;
-    --blue:#0080FF;
-    --yellow:#FFD400;
-    --green:#00C853;
+    --pink:#FF4D74;
+    --blue:#0D4DA0;
+    --yellow:#FDCE20;
+    --green:#2FAE5C;
+    --orange:#EF6609;
+    --purple:#6A3597;
     --ink:#1A1414;
-    --paper:#FFFDF9;
-    --pastel-pink:#F4A6BE;
-    --pastel-blue:#A7D8E8;
-    --pastel-yellow:#F7DE7A;
-    --pastel-lavender:#D6CBE4;
+    --paper:#FFFCF6;
+    --pastel-pink:#FBC9D2;
+    --pastel-blue:#C6D8EC;
+    --pastel-yellow:#FCE9A8;
+    --pastel-lavender:#E3D3ED;
     --display: 'Baloo 2', sans-serif;
     --body: 'Zen Kaku Gothic New', sans-serif;
     --scribble: 'Yomogi', cursive;
@@ -80,10 +122,11 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    padding:64px 0 40px;
+    position:relative;z-index:2;
+    padding:64px 0 0;
     display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;
   }
-  @media (max-width:900px){.hero{grid-template-columns:1fr;padding:40px 0;}}
+  @media (max-width:900px){.hero{grid-template-columns:1fr;padding:40px 0 0;}}
   .eyebrow-tag{
     display:inline-flex;align-items:center;gap:8px;
     background:var(--pastel-yellow);border:2px solid var(--ink);
@@ -115,6 +158,15 @@
   .hero-note{font-family:var(--scribble);font-size:1rem;color:var(--ink);margin-top:14px;display:block;}
 
   /* ---------- STICKER SHEET (signature element) ---------- */
+  .package-shot{
+    position:relative;
+    max-width:340px;margin:-20px auto -90px;
+    transform:rotate(7deg);
+    z-index:5;
+  }
+  .package-img{width:100%;height:auto;display:block;filter:drop-shadow(8px 10px 0 rgba(26,20,20,.9));}
+  @media (max-width:900px){.package-shot{max-width:240px;margin:0 auto -50px;transform:rotate(6deg);}}
+
   .sheet{
     position:relative;
     background:#fff;
@@ -176,7 +228,7 @@
   .section-head p{margin-top:14px;color:#3a3230;line-height:1.85;font-size:1rem;}
 
   /* CONCEPT */
-  .concept{background:var(--pastel-lavender);}
+  .concept{background:var(--pastel-lavender);position:relative;z-index:1;}
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   @media (max-width:800px){.pillars{grid-template-columns:1fr;}}
   .pillar{
@@ -232,7 +284,7 @@
   .s3{background:linear-gradient(135deg,var(--yellow),var(--pastel-yellow));color:var(--ink);}
   .s4{background:linear-gradient(135deg,var(--green),#8be6a4);color:var(--ink);}
   .s5{background:linear-gradient(135deg,var(--pastel-lavender),#efe9f6);color:var(--ink);}
-  .s6{background:linear-gradient(135deg,#1A1414,#4a3d3a);}
+  .s6{background:linear-gradient(135deg,var(--purple),#7a4f9e);}
   .s7{background:linear-gradient(135deg,var(--pastel-pink),#fff);color:var(--ink);}
   .s8{background:linear-gradient(135deg,var(--pastel-blue),#fff);color:var(--ink);}
 
@@ -340,20 +392,8 @@
   </div>
 
   <div>
-    <div class="sheet">
-      <div class="nail-card"><div class="nail-shape n1"></div></div>
-      <div class="nail-card"><div class="nail-shape n2"></div></div>
-      <div class="nail-card peel">
-        <div class="nail-shape"></div>
-        <div class="peel-label">POP<br>MORE<small>PEEL &amp; WEAR</small></div>
-      </div>
-      <div class="nail-card"><div class="nail-shape n4"></div></div>
-      <div class="nail-card"><div class="nail-shape n5"></div></div>
-      <div class="nail-card"><div class="nail-shape n6"></div></div>
-      <div class="nail-card"><div class="nail-shape n7"></div></div>
-      <div class="nail-card"><div class="nail-shape n8"></div></div>
-      <div class="nail-card"><div class="nail-shape n3"></div></div>
-      <div class="sheet-caption">1シート20枚入り</div>
+    <div class="package-shot">
+      <img src="package-front-transparent.png" alt="POPMORE パッケージデザイン" class="package-img">
     </div>
   </div>
 </div>
